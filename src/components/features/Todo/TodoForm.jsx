@@ -66,7 +66,7 @@ export const TodoForm = ({ onAdd }) => {
           type="text"
           name="description"
           rows={isExpanded ? 3 : 1}
-          className="item-textarea"
+          className="todo-item-textarea"
           value={newTodo.description}
           placeholder="Take a note ..." 
           onClick={expand}
