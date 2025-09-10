@@ -1,0 +1,146 @@
+.todo-app {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.todo-app h1 {
+  text-align: center;
+}
+
+.todo-app form {
+  position: relative;
+  width: 480px;
+  margin: 2rem auto 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 7px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app input,
+.todo-app textarea {
+  width: 100%;
+  border: none;
+  padding: 0.2rem;
+  outline: none;
+  font-size: 1em;
+  font-family: inherit;
+  resize: none;
+}
+
+.todo-item-input {
+  /* start hidden */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* when expanded */
+.todo-item-input.expanded {
+  max-height: 60px;  /* adjust based on input size */
+  opacity: 1;
+}
+
+
+.todo-form button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.todo-items {
+  width: 95%;
+  margin: 0.5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.todo-item {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  width: 240px;
+  padding: 0.5rem;
+  margin: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.todo-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item-header h3 {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.todo-item-body {
+  font-size: 0.9em;
+  margin-bottom: 0.5rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.todo-item-completed {
+  font-size: 0.9rem;
+  color: green;
+  text-decoration: line-through;
+}
+
+.todo-item button {
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  padding: 0.3rem;
+}
+
+.todo-item-toggle-status-button {
+  background-color: transparent;
+  color: gray;
+}
+
+.todo-item-remove-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: auto;           /* push to bottom */
+  align-self: flex-end;       /* stick to right */
+
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.todo-item-remove-button:hover {
+  background-color: #e60000;
+  transform: scale(1.05); 
+}
+
+.todo-item-remove-button:active {
+  transform: scale(0.95);     /* click feedback */
+}
